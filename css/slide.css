@@ -1,0 +1,113 @@
+/* banner設定 */
+.slide-carousel {
+  width: 100%;
+  height: 540px;
+  position: relative;
+  overflow: hidden;
+}
+.slide-carousel .item-list {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: grid;
+  justify-items: center;
+  align-items: center;  
+}
+.item-list li{
+  height: 100%;
+  transition: all 0.5s ease-in-out;
+  position: absolute;
+  /* top: 0;
+  left: 0; */
+}
+.item-list .item0{
+  transform: translateX(-100%);
+}
+.item-list .item1{
+  transform: translateX(0);
+}
+.item-list .item2{
+  transform: translateX(100%);
+}
+.item-list .item3{
+  transform: translateX(200%);
+}
+
+/* slide設定 */
+ .item-list .item-content{
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.item-list .item-content a{
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+/* 指示小圖示設定 */
+.indicator-list {
+  position: absolute;
+  bottom: 20px;
+  left: calc((100% - 98px) / 2);
+  z-index: 999;
+}
+.indicator-list a {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #ccc;
+  margin-left: 5px;
+}
+a.selected {
+  border-color: var(--pink);
+  background-color: var(--success);
+}
+
+/* 左右控制器設定 */
+.slide-carousel .controls {
+  opacity: 0;
+}
+.slide-carousel:hover .controls {
+  opacity: 1;
+  transition: all 0.5s ease;
+}
+.slide-carousel .controls a {
+  width:40px;
+	height: 60px;
+	position: absolute;
+	background-color: rgba(0,0,0,0.2);
+	font-size: 35px;
+	padding-top: 25px;
+	text-decoration: none;
+}
+.slide-carousel .controls a:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.slide-carousel .controls .item-prev {
+  color: var(--pink);
+  top: 50%;
+  left: 0;
+  margin-top: -42px;
+}
+.slide-carousel .controls .item-next {
+  color: var(--pink);
+  top: 50%;
+  right: 0;
+  margin-top: -42px;
+}
+
+/* 半透明色塊設定 */
+ .desc {
+  height: 60px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+

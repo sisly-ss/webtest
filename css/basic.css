@@ -1,0 +1,1178 @@
+@charset "UTF-8";
+
+/* -------------------變數設定------------------- */
+
+:root {
+
+  /* -----------色彩命名----------- */
+  --black: #000000ff;
+  /*ff為透明度*/
+  --grey: #545454ff;
+  --silver: #6f6f6fff;
+  --spanish: #999999ff;
+  --gainsboro: #e0e0e0ff;
+  --white: #ffffffff;
+  --pink: #f18ab8ff;
+  --mimi: #f9cddeff;
+  --piggy: #fae4eeff;
+  --red: #eb5757ff;
+  --empty: #ffffff00;
+  --info: #2f80edff;
+  --success: #27ae60ff;
+  --warning: #e2b93bff;
+  --error: #ff0000ff;
+
+  /* -----------文字尺寸----------- */
+  --h1: 30px;
+  --h2: 26px;
+  --h3: 24px;
+  --h4: 22px;
+  --h5: 20px;
+  --h6: 18px;
+  --normal: 16px;
+  --small: 14px;
+  --mini: 12px;
+
+  /* -----------間距基準值----------- */
+  --spacing: 8px;
+
+  --size_normal: 10px;
+  --size_basic: 0.1;
+}
+
+/*-------基本元素設定-------*/
+html, body {
+  font-family: 'Nanum Gothic', '微軟正黑體', sans-serif;
+  color: var(--grey);
+  /*#545454ff為預防舊版瀏覽器的設定值*/
+  height: 100%;
+  font-size: var(--normal);
+}
+
+a:link, a:active, a:visited {
+  color: var(--pink);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--black);
+  text-decoration: underline;
+}
+
+/*-------常用樣式設定-------*/
+/*-------標題文字-------*/
+.h1 {
+  font-size: var(--h1);
+  font-weight: 800;
+  line-height: calc(var(--size_basic)* 25);
+  margin: calc(var(--size_normal)* 2) 0;
+}
+
+h2 {
+  font-size: var(--h2);
+  font-weight: 800;
+  line-height: calc(var(--size_basic)* 20);
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: var(--h3);
+  font-weight: 400;
+  line-height: calc(var(--size_basic)* 20);
+  text-transform: uppercase;
+}
+
+h4 {
+  font-size: var(--h4);
+  font-weight: 400;
+  line-height: calc(var(--size_basic)* 20);
+}
+
+h5 {
+  font-size: var(--h5);
+  font-weight: 200;
+  line-height: calc(var(--size_basic)* 20);
+}
+
+h6 {
+  font-size: var(--h6);
+  font-weight: 200;
+  line-height: calc(var(--size_basic)* 20);
+}
+
+p {
+  font-size: var(--normal);
+  line-height: calc(var(--size_basic)* 13);
+}
+
+/*-------文字排版樣式-------*/
+/*------文字尺寸------*/
+.font-size_12 {
+  font-size: var(--mini) !important;
+}
+
+.font-size_14 {
+  font-size: var(--small) !important;
+}
+
+.font-size_16 {
+  font-size: var(--normal) !important;
+}
+
+.font-size_18 {
+  font-size: var(--h6) !important;
+}
+
+.font-size_20 {
+  font-size: var(--h5) !important;
+}
+
+.font-size_22 {
+  font-size: var(--h4) !important;
+}
+
+.font-size_24 {
+  font-size: var(--h3) !important;
+}
+
+.font-size_26 {
+  font-size: var(--h2) !important;
+}
+
+.font-size_30 {
+  font-size: var(--h1) !important;
+}
+
+.font-size_36 {
+  font-size: calc(var(--h6)*2) !important;
+}
+
+.font-size_40 {
+  font-size: calc(var(--size_normal)*4) !important;
+}
+
+.font-size_50 {
+  font-size: calc(var(--size_normal)*5) !important;
+}
+
+.font-size_smaller {
+  font-size: 80% !important;
+}
+
+.font-size_bigger {
+  font-size: 120% !important;
+}
+
+/*------文字粗體------*/
+.font-weight_800 {
+  font-weight: 800;
+}
+
+.font-weight_700 {
+  font-weight: 700;
+}
+
+.font-weight_600 {
+  font-weight: 600;
+}
+
+.font-weight_400 {
+  font-weight: 400;
+}
+
+.font-weight_bolder {
+  font-weight: bolder;
+}
+
+.font-weight_normal {
+  font-weight: normal;
+}
+
+/*------文字大小寫------*/
+.text_uppercase {
+  text-transform: uppercase;
+}
+
+.text_lowercase {
+  text-transform: lowercase;
+}
+
+.text_nocase {
+  text-transform: none;
+}
+
+/*------文字色彩------*/
+.color_black {
+  color: var(--black);
+}
+
+.color_grey {
+  color: var(--grey);
+}
+
+.color_silver {
+  color: var(--silver);
+}
+
+.color_spanish {
+  color: var(--spanish);
+}
+
+.color_gainsboro {
+  color: var(--gainsboro);
+}
+
+.color_white {
+  color: var(--white);
+}
+
+.color_pink {
+  color: var(--pink);
+}
+
+.color_mimi {
+  color: var(--mimi);
+}
+
+.color_piggy {
+  color: var(--piggy);
+}
+
+.color_red {
+  color: var(--red);
+}
+
+.color_info {
+  color: var(--info);
+}
+
+.color_success {
+  color: var(--success);
+}
+.color_warning{
+  color: var(--warning);
+}
+.color_error {
+  color: var(--error);
+}
+
+
+/*------段落設定------*/
+/*-----行高設定-----*/
+.line-height_13 {
+  line-height: calc(var(--size_basic)*13);
+}
+
+.line-height_15 {
+  line-height: calc(var(--size_basic)*15);
+}
+
+.line-height_1x {
+  line-height: calc(var(--size_basic)*10);
+}
+
+.line-height_2x {
+  line-height: calc(var(--size_basic)*20);
+}
+
+.line-height_3x {
+  line-height: calc(var(--size_basic)*30);
+}
+
+.line-height_4x {
+  line-height: calc(var(--size_basic)*40);
+}
+
+.line-height_5x {
+  line-height: calc(var(--size_basic)*50);
+}
+
+.line-height_6x {
+  line-height: calc(var(--size_basic)*60);
+}
+
+.line-height_7x {
+  line-height: calc(var(--size_basic)*70);
+}
+
+.line-height_8x {
+  line-height: calc(var(--size_basic)*80);
+}
+
+.line-height_9x {
+  line-height: calc(var(--size_basic)*90);
+}
+
+.line-height_10x {
+  line-height: calc(var(--size_normal)*1);
+}
+
+.line-height_20x {
+  line-height: calc(var(--size_normal)*2);
+}
+
+.line-height_30x {
+  line-height: calc(var(--size_normal)*3);
+}
+
+.line-height_40x {
+  line-height: calc(var(--size_normal)*4);
+}
+
+.line-height_50x {
+  line-height: calc(var(--size_normal)*5);
+}
+
+
+/*-----段落對齊-----*/
+.text-align_left {
+  text-align: left;
+}
+
+.text-align_center {
+  text-align: center;
+}
+
+.text-align_right {
+  text-align: right;
+}
+
+.text-align_justify {
+  text-align: justify;
+}
+
+
+/*------文字特殊樣式------*/
+/*------文字陰影------*/
+.text_shadow_2 {
+  text-shadow: 0 0 2px var(--grey);
+}
+
+
+/*------文字折行------*/
+.ellipsis_1 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ellipsis_2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  /*行數*/
+  overflow: hidden;
+}
+
+.ellipsis_3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  /*行數*/
+  overflow: hidden;
+}
+
+.ellipsis_4 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  /*行數*/
+  overflow: hidden;
+}
+
+.ellipsis_5 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  /*行數*/
+  overflow: hidden;
+}
+
+/*------首字放大------*/
+.first-letter-effect:first-letter {
+  font-size: 200%;
+  color: var(--pink,);
+  font-weight: bold;
+}
+
+/*------提示文字-------*/
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: var(--pink);
+  color: var(--white);
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 10000;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*------作用文字-------*/
+.highlight_txt {
+  border-bottom: 3px solid var(--spanish);
+  font-weight: 800 !important;
+  text-transform: uppercase;
+  color: var(--pink) !important;
+}
+
+.active_txt {
+  padding: var(--size_normal);
+  background-color: var(--pink);
+  color: var(--white);
+}
+
+/*-------區塊樣式設定-------*/
+/*-----背景顏色設定-----*/
+.bg_black {
+  background-color: var(--black);
+}
+
+.bg_grey {
+  background-color: var(--grey);
+}
+
+.bg_silver {
+  background-color: var(--silver);
+}
+
+.bg_spanish {
+  background-color: var(--spanish);
+}
+
+.bg_white {
+  background-color: var(--white);
+}
+
+.bg_pink {
+  background-color: var(--pink);
+}
+
+.bg_mimi {
+  background-color: var(--mimi);
+}
+
+.bg_piggy {
+  background-color: var(--piggy);
+}
+
+.bg_red {
+  background-color: var(--red);
+}
+
+/*-----漸層顏色設定-----*/
+.gradient_silver {
+  background-image: linear-gradient(var(--white)0%, var(--silver)150%);
+}
+
+.gradient_grey {
+  background-image: linear-gradient(var(--white)0%, var(--grey)150%);
+}
+
+.gradient_black {
+  background-image: linear-gradient(var(--white)0%, var(--black)150%);
+}
+
+.gradient_pink {
+  background-image: linear-gradient(var(--white)0%, var(--pink)150%);
+}
+
+.gradient_mimi {
+  background-image: linear-gradient(var(--white,)0%, var(--mimi)150%);
+}
+
+.gradient_piggy {
+  background-image: linear-gradient(var(--white,)0%, var(--piggy)150%);
+}
+
+.gradient_line {
+  background-image: repeating-linear-gradient(var(--piggy) 26%, var(--pink) 27%, var(--piggy) 28%, var(--piggy));
+}
+
+/*-----Padding設定-----*/
+.padding-left_10 {
+  padding-left: calc(var(--size_normal)*1);
+}
+
+.padding-left_20 {
+  padding-left: calc(var(--size_normal)*2);
+}
+
+.padding-left_30 {
+  padding-left: calc(var(--size_normal)*3);
+}
+
+.padding-left_40 {
+  padding-left: calc(var(--size_normal)*4);
+}
+
+.padding-left_50 {
+  padding-left: calc(var(--size_normal)*5);
+}
+
+.padding_right_10 {
+  padding-right: calc(var(--size_normal)*1);
+}
+
+.padding_right_20 {
+  padding-right: calc(var(--size_normal)*2);
+}
+
+.padding-right_30 {
+  padding-right: calc(var(--size_normal)*3);
+}
+
+.padding_right-40 {
+  padding-right: calc(var(--size_normal)*4);
+}
+
+.padding_right-50 {
+  padding-right: calc(var(--size_normal)*5);
+}
+
+.padding_h1 {
+  padding-left: calc(var(--size_normal)*1);
+  padding-right: calc(var(--size_normal)*1);
+}
+
+.padding_h2 {
+  padding-left: calc(var(--size_normal)*2);
+  padding-right: calc(var(--size_normal)*2);
+}
+
+.padding_h3 {
+  padding-left: calc(var(--size_normal)*3);
+  padding-right: calc(var(--size_normal)*3);
+}
+
+.padding_h4 {
+  padding-left: calc(var(--size_normal)*4);
+  padding-right: calc(var(--size_normal)*4);
+}
+
+.padding_h45 {
+  padding-left: calc(var(--size_normal)*4.5);
+  padding-right: calc(var(--size_normal)*4.5);
+}
+
+.padding_h5 {
+  padding-left: calc(var(--size_normal)*5);
+  padding-right: calc(var(--size_normal)*5);
+}
+
+.padding_h85 {
+  padding-left: calc(var(--size_normal)*8.5);
+  padding-right: calc(var(--size_normal)*8.5);
+}
+
+.padding-top_10 {
+  padding-top: calc(var(--size_normal)*1);
+}
+
+.padding-top_20 {
+  padding-top: calc(var(--size_normal)*2);
+}
+
+.padding-top_30 {
+  padding-top: calc(var(--size_normal)*3);
+}
+
+.padding-top_40 {
+  padding-top: calc(var(--size_normal)*4);
+}
+
+.padding-top_50 {
+  padding-top: calc(var(--size_normal)*5);
+}
+
+.padding-bottom_10 {
+  padding-bottom: calc(var(--size_normal)*1);
+}
+
+.padding-bottom_20 {
+  padding-bottom: calc(var(--size_normal)*2);
+}
+
+.padding-bottom_30 {
+  padding-bottom: calc(var(--size_normal)*3);
+}
+
+.padding-bottom_40 {
+  padding-bottom: calc(var(--size_normal)*4);
+}
+
+.padding-bottom_50 {
+  padding-bottom: calc(var(--size_normal)*5);
+}
+
+
+.padding_v1 {
+  padding-top: calc(var(--size_normal)*1);
+  padding-bottom: calc(var(--size_normal)*1);
+}
+
+.paddingn_v2 {
+  padding-top: calc(var(--size_normal)*2);
+  padding-bottom: calc(var(--size_normal)*2);
+}
+
+.padding_v3 {
+  padding-top: calc(var(--size_normal)*3);
+  padding-bottom: calc(var(--size_normal)*3);
+}
+
+.padding_v4 {
+  padding-top: calc(var(--size_normal)*4);
+  padding-bottom: calc(var(--size_normal)*4);
+}
+
+.padding_v45 {
+  padding-top: calc(var(--size_normal)*4.5);
+  padding-bottom: calc(var(--size_normal)*4.5);
+}
+
+.padding_v5 {
+  padding-top: calc(var(--size_normal)*5);
+  padding-bottom: calc(var(--size_normal)*5);
+}
+
+.padding_v85 {
+  padding-top: calc(var(--size_normal)*8.5);
+  padding-bottom: calc(var(--size_normal)*8.5);
+}
+
+.padding_1 {
+  padding: calc(var(--size_normal)*1);
+}
+
+.padding_2 {
+  padding: calc(var(--size_normal)*2);
+}
+
+.padding_3 {
+  padding: calc(var(--size_normal)*3);
+}
+
+.padding_4 {
+  padding: calc(var(--size_normal)*4);
+}
+
+.padding_45 {
+  padding: calc(var(--size_normal)*4.5);
+}
+
+.padding_5 {
+  padding: calc(var(--size_normal)*5);
+}
+
+.padding_85 {
+  padding: calc(var(--size_normal)*8.5);
+}
+
+
+/*-----Margin設定-----*/
+.margin-left_10 {
+  margin-left: calc(var(--size_normal)*1);
+}
+
+.margin-left_20 {
+  margin-left: calc(var(--size_normal)*2);
+}
+
+.margin-left_30 {
+  margin-left: calc(var(--size_normal)*3);
+}
+
+.margin-left_40 {
+  margin-left: calc(var(--size_normal)*4);
+}
+
+.margin-left_50 {
+  margin-left: calc(var(--size_normal)*5);
+}
+
+.margin-right_10 {
+  margin-right: calc(var(--size_normal)*1);
+}
+
+.margin-right_20 {
+  margin-right: calc(var(--size_normal)*2);
+}
+
+.margin-right_30 {
+  margin-right: calc(var(--size_normal)*3);
+}
+
+.margin-right_40 {
+  margin-right: calc(var(--size_normal)*4);
+}
+
+.margin-right_50 {
+  margin-right: calc(var(--size_normal)*5);
+}
+
+.margin_h1 {
+  margin-left: calc(var(--size_normal)*1);
+  margin-right: calc(var(--size_normal)*1);
+}
+
+.margin_h2 {
+  margin-left: calc(var(--size_normal)*2);
+  margin-right: calc(var(--size_normal)*2);
+}
+
+.margin_h3 {
+  margin-left: calc(var(--size_normal)*3);
+  margin-right: calc(var(--size_normal)*3);
+}
+
+.margin_h4 {
+  margin-left: calc(var(--size_normal)*4);
+  margin-right: calc(var(--size_normal)*4);
+}
+
+.margin_h45 {
+  margin-left: calc(var(--size_normal)*4.5);
+  margin-right: calc(var(--size_normal)*4.5);
+}
+
+.margin_h5 {
+  margin-left: calc(var(--size_normal)*5);
+  margin-right: calc(var(--size_normal)*5);
+}
+
+.margin_h85 {
+  margin-left: calc(var(--size_normal)*8.5);
+  margin-right: calc(var(--size_normal)*8.5);
+}
+
+.margin-top_10 {
+  margin-top: calc(var(--size_normal)*1);
+}
+
+.margin-top_20 {
+  margin-top: calc(var(--size_normal)*2);
+}
+
+.margin-top_30 {
+  margin-top: calc(var(--size_normal)*3);
+}
+
+.margin-top_40 {
+  margin-top: calc(var(--size_normal)*4);
+}
+
+.margin-top_50 {
+  margin-top: calc(var(--size_normal)*5);
+}
+
+.margin-bottom_10 {
+  margin-bottom: calc(var(--size_normal)*1);
+}
+
+.margin-bottom_20 {
+  margin-bottom: calc(var(--size_normal)*2);
+}
+
+.margin-bottom_30 {
+  margin-bottom: calc(var(--size_normal)*3);
+}
+
+.margin-bottom_40 {
+  margin-bottom: calc(var(--size_normal)*4);
+}
+
+.margin-bottom_50 {
+  margin-bottom: calc(var(--size_normal)*5);
+}
+
+
+.margin_v1 {
+  margin-top: calc(var(--size_normal)*1);
+  margin-bottom: calc(var(--size_normal)*1);
+}
+
+.margin_v2 {
+  margin-top: calc(var(--size_normal)*2);
+  margin-bottom: calc(var(--size_normal)*2);
+}
+
+.margin_v3 {
+  margin-top: calc(var(--size_normal)*3);
+  margin-bottom: calc(var(--size_normal)*3);
+}
+
+.margin_v4 {
+  margin-top: calc(var(--size_normal)*4);
+  margin-bottom: calc(var(--size_normal)*4);
+}
+
+.margin_v45 {
+  margin-top: calc(var(--size_normal)*4.5);
+  margin-bottom: calc(var(--size_normal)*4.5);
+}
+
+.margin_v5 {
+  margin-top: calc(var(--size_normal)*5);
+  margin-bottom: calc(var(--size_normal)*5);
+}
+
+.margin_v85 {
+  margin-top: calc(var(--size_normal)*8.5);
+  margin-bottom: calc(var(--size_normal)*8.5);
+}
+
+.margin_1 {
+  margin: calc(var(--size_normal)*1);
+}
+
+.margin_2 {
+  margin: calc(var(--size_normal)*2);
+}
+
+.margin_3 {
+  margin: calc(var(--size_normal)*3);
+}
+
+.margin_4 {
+  margin: calc(var(--size_normal)*4);
+}
+
+.margin_45 {
+  margin: calc(var(--size_normal)*4.5);
+}
+
+.margin_5 {
+  margin: calc(var(--size_normal)*5);
+}
+
+.margin_85 {
+  margin: calc(var(--size_normal)*8.5);
+}
+
+/*-----位置設定-----*/
+/*----浮動設定----*/
+.float_left {
+  float: left;
+}
+
+.float_right {
+  float: right;
+}
+
+.float_none {
+  float: none;
+}
+
+.clear_both {
+  clear: both;
+}
+
+/*----Position設定----*/
+.position_absolute-bottom-20 {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.position_absolute-center {
+  position: absolute;
+  z-index: 99;
+  bottom: 0;
+  left: 28%;
+}
+
+.position_relative {
+  position: relative;
+}
+
+/*----Display設定----*/
+.display_block {
+  display: block !important;
+}
+
+.display_inlineblock {
+  display: inline-block !important;
+}
+
+.display_inline {
+  display: inline !important;
+}
+
+/*----邊框設定----*/
+.border-radius_15 {
+  border-radius: 15px;
+}
+
+.border-radius_30 {
+  border-radius: 30px;
+}
+
+.border-radius_all {
+  border-radius: 100%;
+}
+
+.border_bottom-5 {
+  border-bottom: 5px solid var(--pink);
+}
+
+.boxshadow_pink-5 {
+  box-shadow: 0 0 5px 10px var(--pink);
+}
+
+.boxshadow_pink-10 {
+  box-shadow: 0 0 10px 10px var(--pink);
+}
+
+.boxshadow_pink-15 {
+  box-shadow: 0 0 15px 10px var(--pink);
+}
+
+.boxshadow_silver-5 {
+  box-shadow: 0 0 5px 10px var(--silver);
+}
+
+.boxshadow_silver-10 {
+  box-shadow: 0 0 10px 10px var(--silver);
+}
+
+.boxshadow_silver-15 {
+  box-shadow: 0 0 15px 10px var(--silver);
+}
+
+.dropshadow_silver-5 {
+  filter: drop-shadow(0 0 5px var(--silver));
+}
+
+.dropshadow_silver-10 {
+  filter: drop-shadow(0 0 10px var(--silver));
+}
+
+.dropshadow_silver-15 {
+  filter: drop-shadow(0 0 15px var(--silver));
+}
+
+
+
+/*-----分欄設定-----*/
+.column-count_1 {
+  column-count: 1;
+}
+.column-count_2 {
+  column-count: 2;
+}
+.column-count_3 {
+  column-count: 3;
+}
+.column-count_4 {
+  column-count: 4;
+}
+.column-count_5 {
+  column-count: 5;
+}
+
+.column-gap_50{
+  column-gap: 50px;
+}
+.column-gap_40{
+  column-gap: 40px;
+}
+.column-gapu_30{
+  column-gap: 30px;
+}
+.column-gap_20{
+  column-gap:20px;
+}
+.column-gap_10{
+  column-gap:10px;
+}
+.column-gap_0{
+  column-gap:0;
+}
+
+.column-rule {
+  column-rule: 1px solid var(--spanish);
+}
+
+
+/*-----背景圖位置-----*/
+.bg_top {
+  background-position: top;
+}
+
+.bg_bottom {
+  background-position: bottom;
+}
+
+/*-----圖片效果設定-----*/
+.flip_img {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.vertical-align_middle {
+  vertical-align: middle;
+}
+
+.vertical-align_bottom {
+  vertical-align: bottom;
+}
+
+.pic_width-350 {
+  width: calc(var(--size_normal)*35);
+  height: auto;
+}
+
+.pic_transform {
+  transform: scale(1, 1);
+  transition: transform 0.4s linear;
+}
+
+.pic_transform:hover {
+  transform: scale(1.5, 1.5);
+  opacity: 0.6;
+  box-shadow: 0 0 10px 5px var(--grey);
+  z-index: 1000;
+  position: relative;/*position要啟用，z-index才有作用*/
+}
+
+.pic_drop-shadow {
+  filter: drop-shadow(5px 5px 5px var(--grey));
+}
+
+/*-------組件樣式設定-------*/
+/*----按鈕顏色----*/
+.button_grey {
+  font-size: var(--size_normal);
+  font-weight: bolder;
+  text-align: center;
+  color: var(--white,);
+  background-color: var(--grey);
+}
+
+.button_grey:hover {
+  color: var(--grey);
+  background-color: var(--white,);
+}
+
+.button_grey:active {
+  color: var(--white,);
+  background-image: linear-gradient(var(--white,)0%, var(--grey)150%);
+}
+
+.button_grey-gradient {
+  font-size: var(--size_normal);
+  font-weight: bolder;
+  text-align: center;
+  color: var(--white,);
+  background-image: linear-gradient(var(--white,)0%, var(--grey)150%);
+}
+
+.button_grey-gradient:hover,
+.button_grey-gradient:active {
+  background-image: linear-gradient(var(--grey)0%, var(--white,)150%);
+}
+
+.button_pink {
+  font-size: var(--size_normal);
+  font-weight: bolder;
+  text-align: center;
+  color: var(--grey);
+  background-color: var(--pink);
+}
+
+.button_pink:hover {
+  color: var(--grey);
+  background-color: var(--mimi);
+}
+
+.button_pink:active {
+  color: var(--grey);
+  background-image: linear-gradient(var(--white,)0%, var(--pink)150%);
+}
+
+
+.button_pink-gradient {
+  font-size: var(--size_normal);
+  font-weight: bolder;
+  text-align: center;
+  color: var(--grey);
+  background-image: linear-gradient(var(--white,)0%, var(--pink)150%);
+}
+
+.button_pink-gradient:hover,
+.button_pink-gradient:active {
+  background-image: linear-gradient(var(--pink)0%, var(--white,)150%);
+  filter: drop-shadow(1px 1px 5px var(--grey));
+}
+
+.button_disable {
+  color: var(--white,);
+  background-color: var(--gainsboro, #e0e0e0ff);
+}
+
+/*----按鈕尺寸----*/
+.button_large {
+  width: calc(100% - 20px);
+  height: 30px;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.button_medium {
+  width: calc(100% - 30px);
+  height: 30px;
+  border-radius: 8px;
+  padding: 10px 15px;
+}
+
+.button_normal {
+  width: calc(100% - 40px);
+  height: 30px;
+  border-radius: 8px;
+  padding: 10px 20px;
+}
+
+.button_small {
+  width: calc(100% - 50px);
+  height: 30px;
+  border-radius: 8px;
+  padding: 10px 25px;
+}
+
+.button_extra-small {
+  width: calc(100% - 40px);
+  height: 30px;
+  border-radius: 50%;
+  padding: 10px 20px;
+}
+
+.button_large:hover,
+.button_medium:hover,
+.button_normal:hover,
+.button_small:hover,
+.button_extra-small:hover {
+  box-shadow: 0 0 8px 0 var(--grey);
+}
+
+/*-----指標樣式-----*/
+.cursor_pointer {
+  cursor: pointer;
+}

@@ -1,0 +1,1020 @@
+@charset "UTF-8";
+
+/*---------------共用結構設定---------------*/
+/*-------共用版面設定-------*/
+.full_layout {
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.half_layout {
+    width: 50%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.narrow_layout {
+    width: 1170px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.small_layout {
+    width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.margin_auto {
+    margin: auto;
+}
+
+.box-sizing_boder {
+    box-sizing: border-box;
+}
+
+.overflow_hidden {
+    overflow: hidden;
+}
+
+/*------------頁首設定------------*/
+#header {
+    width: 1170px;
+    height: 165px;
+    margin: 0 auto;
+    padding: 15px 0;
+}
+
+#logo {
+    float: left;
+    background-image: url(../images/logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#logo a {
+    display: block;
+    width: 330px;
+    height: 165px;
+}
+
+#logo span {
+    visibility: hidden;
+}
+
+/*------------選單設定------------*/
+/*---------外層結構---------*/
+#nav {
+    width: 800px;
+    float: right;
+    margin-top: 50px;
+}
+
+/*---------上層固定---------*/
+#top-nav {
+    float: right;
+    width: 100%;
+    margin: -10px 20px 20px 0;
+    font-size: var(--h6);
+    text-transform: uppercase;
+}
+
+#top-nav a {
+    display: block;
+    float: right;
+    margin-left: 30px;
+}
+
+#top-nav a:hover {
+    text-decoration: none;
+}
+
+#top-nav .material-icons,
+#main-nav .material-icons {
+    transform: translate(-20%, 30%);
+    margin-right: 5px;
+}
+
+/*---------主選單---------*/
+#main-nav {
+    float: right;
+    font-size: var(--h4);
+}
+
+#main-nav li {
+    float: left;
+    position: relative;
+}
+
+#main-nav a {
+    display: block;
+    width: 120px;
+    color: var(--grey);
+    line-height: 40px;
+    text-align: center;
+    margin-left: 40px;
+    background-color: var(--white);
+}
+
+/* --滑鼠滑入作用按鈕變色--*/
+#main-nav a:hover, #main-nav a:active {
+    color: var(--pink);
+    text-decoration: none;
+    background-color: var(--piggy);
+    border-bottom: 3px solid var(--grey);
+}
+
+/*-----針對第二層選單-----*/
+#main-nav li li{
+    font-size: var(--h5);
+}
+
+/*---滑鼠滑入展開次選單---*/
+#main-nav ul ul{
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    z-index: 99;
+}
+#main-nav li:hover>ul{
+    visibility: visible;
+}
+/* ---RWD選單設定--- */
+#main-nav .tip{
+    display: block;
+    visibility: hidden;
+    width: 240px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: var(--grey);
+    background-color: rgba(241,138,184,.5);
+    border-radius: 8px;
+    position: absolute;
+    right: 40px;
+}
+#nav-sns, .toggler{
+    display: none;
+}
+
+/* -------內容框架設定------- */
+#main-content {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+
+/*-------頁尾設定-------*/
+#footer {
+    width: 1170px;
+    height: 95px;
+    clear: both;
+    margin: 0 auto;
+}
+
+#small-logo,
+#copyright {
+    float: left;
+    padding-top: 25px;
+}
+
+#small-logo img {
+    width: auto;
+    height: 50px;
+}
+
+#copyright small, #copyright a {
+    display: inline-block;
+    font-size: var(--normal);
+    margin-left: 15px;
+    padding-top: 20px;
+}
+
+#sns {
+    float: right;
+    padding-top: 20px;
+}
+
+#sns a {
+    display: block;
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+}
+
+/* -------GoTop設定------- */
+#gotop {
+    position: fixed;
+    bottom: 55px;
+    right: 30px;
+    z-index: 99;
+    text-align: center;
+    display: none;
+}
+
+#gotop .material-icons {
+    font-size: 60px;
+    color: var(--pink);
+    background-color: var(--white);
+    border-radius: 50%;
+    box-shadow: 0 0 8px 1px var(--mimi);
+}
+
+#gotop .gotip {
+    display: block;
+    width: 130px;
+    padding: 10px 0;
+    background-color: var(--pink);
+    color: var(--white);
+    text-align: center;
+    border-radius: 6px;
+}
+
+#gotop:hover,
+#gotop:active {
+    filter: drop-shadow(1px 1px 5px var(--grey));
+    cursor: pointer;
+}
+
+#gotop a {
+    text-decoration: none;
+}
+
+/*---------------各頁版面設定---------------*/
+/*------------首頁index版面設定------------*/
+/*----------首頁橫幅設定----------*/
+#banner{
+    width: 100%;
+    height: 540px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0 50px;
+    background-image: linear-gradient(var(--mimi), var(--pink));
+}
+
+#banner img{
+    width: 100%;
+    height: auto;
+    transform: translateY(-10%);
+}
+
+/*--------內容區塊設定--------*/
+.slogan{
+    width: 360px;
+    height: 480px;
+    padding: 10px 20px;
+    text-align: center;
+    float: right;
+    box-shadow: 0 0 15px 10px var(--mimi);
+}
+.slogan h2{
+    color: var(--pink);
+    font-size: var(--h3);
+}
+.slogan p{
+    margin-top: 20px;
+}
+
+/*-------圖文區塊設定-------*/
+.post{
+    width: 330px;
+    height: 500px;
+    margin-right: 40px;
+    float: left;
+    border-radius: 8px;
+    box-shadow: 0 0 15px var(--gainsboro);
+}
+.post_title{
+    height: 40px;
+    line-height: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: var(--h6);
+    color: var(--pink);
+}
+.post_img{
+    width: 100%;
+    height: auto;
+}
+.post_img img {
+	width: 100%;
+	height: auto;
+}
+.post_text{
+    width: 290px;
+    height: 145px;
+    padding: 30px 20px 0;
+    font-size: var(--normal);
+    line-height: 1.4;
+}
+.post .more{
+    font-size: var(--small);
+    text-align: right;
+    margin-top: 20px;
+    padding-right: 20px;
+}
+.post .more a{
+    font-weight: bold;
+}
+.post .more a:hover{
+    font-style: italic;
+}
+/*-------雙箭號圖標-------*/
+.post .more a .material-icons{
+    font-size: var(--normal);
+    transform: translate(50%, 25%);
+}
+
+/*------圖片展示設定------*/
+#picshow{
+    clear: both;
+    display: flex;
+    padding: 30px 0 ;
+}
+#picshow a, #picshow a img{
+    width: 100%;
+}
+/*------內嵌影片設定------*/
+#movie{
+    margin-bottom: 30px;
+}
+#movie iframe{
+    width: 100%;
+    height: 465px;
+}
+
+/*------------About版面設定------------*/
+/*----------內頁橫幅設定----------*/
+.hero-image{
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 30px 0 50px;
+    position: relative;
+}
+.hero-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    color: var(--white);
+    transform: translate(-50%, -50%);
+    letter-spacing: 2px;
+}
+.hero-text button{
+    border: none;
+    padding: 10px 25px;
+    border-radius: 20px;
+    background-color: var(--pink);
+    color: var(--white);
+    font-size: var(--small);
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+.hero-text button:hover{
+    background-color: var(--white);
+    color: var(--pink);
+    box-shadow: 0 0 10px 5px var(--pink);
+    font-weight: bold;
+}
+
+/*----------關於文字----------*/
+#maintxt{
+    padding: 20px 15%;
+    text-align: center;
+}
+#maintxt p{
+    margin-bottom: 15px;
+}
+/*----------Logo區塊設定----------*/
+#mainpic{
+    width: 1000px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 250px 250px;
+    border: 16px solid var(--piggy);
+}
+#mainpic img{
+    width: 100%;
+    height: auto;
+    border: 8px solid var(--piggy);
+    box-sizing: border-box;
+}
+.item1{
+    grid-area: 1/1/2/2;
+}
+.item2{
+    grid-area: 2/1/3/2;
+}
+.item3{
+    grid-area: 1/2/3/3;
+}
+.item4{
+    grid-area: 1/3/2/4;
+}
+.item5{
+    grid-area: 2/3/3/4;
+}
+
+/*------下方表單與地圖設定------*/
+#contact_form, #map{
+    width: 49%;
+}
+#contact_form{
+    float: left;
+}
+#map{
+    float: right;
+}
+#contact_form input, #contact_form textarea{
+    width: calc(100% - 20px);
+    padding: 10px;
+    height: 30px;
+    margin: 10px 0;
+    border: 1px solid var(--pink);
+    border-radius: 4px;
+    background-color: var(--piggy);
+    font-size: var(--normal);
+    color: var(--silver);
+    box-sizing: content-box;
+}
+#contact_form textarea{
+    font-family: 'Nanum Gothic', '微軟正黑體', sans-serif;
+    height: 125px;
+}
+#contact_form input:focus, #contact_form textarea:focus{
+    border-color: var(--success);
+    outline:var(--success);
+    background-color: var(--white);
+    color: var(--success);
+    box-shadow: 0 0 3px var(--grey);
+}
+#contact_form input::placeholder, #contact_form textarea::placeholder{
+    color: var(--pink);
+}
+
+/*------------Stores設定------------*/
+/*----------文字設定----------*/
+.subtext{
+    font-size: var(--h5);
+    text-align: center;
+    padding: 20px;
+    line-height: calc(var(--size_basic)*15);
+}
+
+/*----------Officebox設定----------*/
+/*----------Flex排版----------*/
+.allbox{
+    display: flex;
+    flex-wrap: wrap;
+}
+.flex{
+    display: flex;
+}
+.officebox{
+    flex: 1;
+    height: 265px;
+    border-radius: 35px;
+    margin: 20px;
+    box-shadow: 0 3px 15px 1px var(--spanish);
+    position: relative;
+}
+
+/*----------Float排版----------*/
+/* .officebox{
+    width: 350px;
+    height: 265px;
+    border-radius: 35px;
+    margin: 20px;
+    position: relative;
+    box-shadow: 0 3px 15px 1px var(--spanish);
+    float: left;
+} */
+
+
+.officebox:hover{
+    cursor: pointer;
+    box-shadow: 0 0 8px 4px var(--mimi);
+}
+.officebox img{
+    width: 100%;
+    height: 265px;
+    border-radius: 35px;
+}
+.middle{
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--pink);
+    color: var(--white);
+    padding: 10px 20px;
+    text-align: center;
+    font-size: var(--h6);
+    font-weight: bold;
+}
+.officebox:hover img{
+    opacity: 0.3;
+    filter: blur(4px);
+}
+.officebox:hover .middle{
+    opacity: 1;
+    transition: 0.6s linear;
+}
+
+/*------------Products設定------------*/
+/*----------產品區塊設定----------*/
+.demobox{
+    width: 360px;
+    height: 500px;
+    padding: 10px;
+    margin: 15px;
+    border: 4px solid var(--pink);
+    border-radius: 15px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+    float: left;
+    text-align: center;
+    box-sizing: border-box;
+}
+.demobox h6{
+    color: var(--pink);
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+.demobox a div{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    box-shadow: 0 0 15px var(--pink);
+    margin: 0 auto;
+    background-size: cover;
+}
+.demobox .more{
+    display: block;
+    font-size: var(--small);
+    text-align: right;
+    margin-right: 15px;
+}
+.demobox .more .material-icons{
+    font-size: 18px;
+    transform: translate(15%, 25%);
+}
+
+/*------------News設定------------*/
+/*----------圖文版塊設定----------*/
+.newspost{
+    margin: 20px auto;
+    padding: 10px;
+    border-bottom: dotted 1px var(--grey);
+    overflow: hidden;
+}
+.news_pic{
+    width: 350px;
+    height: 280px;
+    overflow:hidden;
+    float: left;
+}
+.news_pic img{
+    height: 280px;
+    width: auto;
+}
+
+.news_txt{
+    width: 800px;
+    height: 300px;
+    padding: 0 30px;
+    float: right;
+    box-sizing: border-box;
+    position: relative;
+}
+.news_txt .category{
+    line-height: calc(var(--size_normal)*4.5);
+    border: 1px solid var(--pink);
+    border-radius: 12px;
+}
+
+/*----------SVG圖標設定----------*/
+.category svg{
+    margin: 0 20px;
+    vertical-align: middle;
+}
+.myicon{
+    fill: var(--pink);
+    transition: fill 0.2s linear;
+}
+.myicon:hover, .myicon:active{
+    fill: var(--grey);
+    cursor: pointer;
+}
+.category a{
+    text-transform: uppercase;
+    background-color: var(--piggy);
+    padding: 5px 8px;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+.category a::before{
+    content: "#";
+    margin-right: 3px;
+}
+.category a:hover, .category a:active{
+    text-decoration: none;
+    box-shadow: 0 0 2px var(--grey);
+}
+
+/*----------日期設定----------*/
+.date{
+    display: block;
+    float: right;
+    margin-right: 20px;
+    line-height: calc(var(--size_normal)*4.5);
+    font-size: var(--h6);
+    color: var(--pink);
+}
+.date_month{
+    font-size: var(--normal);
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-left: 15px;
+}
+.date_day{
+    background-color: var(--pink);
+    color: var(--white);
+    border-radius: 50%;
+    padding: 9px 7px;
+    text-align: center;
+}
+
+/*----------內容文字設定----------*/
+.news_txt h4{
+    margin: 10px 0;
+    line-height: calc(var(--size_basic)*12);
+}
+.news_txt .more{
+    position: absolute;
+    bottom: 20px;
+    right: 40px;
+}
+
+/*----------頁面導覽設定----------*/
+/*------導覽列------*/
+#nav_bar{
+    height: 50px;
+    text-align: center;
+    font-size: var(--normal);
+    line-height: calc(var(--size_normal)*5);
+}
+/*------導覽數字------*/
+#nav_num a{
+    margin: 0 5px;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--mimi);
+    color: var(--white);
+    line-height: 30px;
+}
+#nav_num .current-icon{
+    background-color: var(--pink);
+}
+
+#nav_num a:hover, #nav_num a:active{
+    text-decoration: none;
+    background-color: var(--silver);
+}
+#nav_num .current-icon:hover, #nav_num .current-icon:active{
+    cursor: default;
+    background-color: var(--pink);
+}
+
+
+/*------導覽圖示------*/
+.nav_icon{
+    display: inline-block;
+    font-size: 35px !important;
+    color: var(--pink) !important;
+    transform: translateY(30%);
+}
+
+
+/* 目前所在數字 */
+#nav_bar a .current-icon {
+	background-color: var(--pink, #f18ab8ff) !important;
+}
+
+#nav_bar .current-icon:hover, #nav_bar .current-icon:active {
+	cursor: default;
+	background-color: var(--pink, #f18ab8ff) !important;
+}
+
+.tooltip{
+    line-height: 1;
+}
+/*------------News_Lady設定------------*/
+/*----------橫幅文字設定----------*/
+.hero-text a:hover{
+    text-decoration: none;
+    color: var(--error);
+    text-shadow: 1px 1px 5px var(--black);
+}
+.hero-text .material-icons{
+    font-size: 32px;
+    transform: translate(-10%, 25%);
+}
+
+/*----------內容區塊設定----------*/
+#main-content h1{
+    font-size: calc(var(--h6)*2);
+    font-weight: 700;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+
+#main-content .row{
+    margin: 10px -10px;
+    padding: 10px;
+    /* display: flex; */
+}
+#main-content .row .column{
+    /* flex: 1; */
+    float: left;
+    width: 25%;
+    box-sizing: border-box;
+}
+
+/*----------圖片區塊設定----------*/
+.column img, figure img{
+    width: 100%;
+    border-radius: 20px;
+    cursor: pointer;
+    opacity: 0.7;
+    filter: grayscale(50%);
+    margin: 10px 0;
+    transition: 0.3s;
+}
+.column, figure{
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.column img:hover, figure img:hover{
+    opacity: 1;
+    filter: grayscale(0%) drop-shadow(5px 5px 5px var(--grey));
+    /* box-shadow: 5px 5px 5px var(--grey); */
+}
+/*----------細部文字設定----------*/
+#main-content .row .column .category{
+    font-weight: bolder;
+    margin: 10px;
+    color: var(--pink);
+}
+/*----------分欄文字設定----------*/
+.column-text{
+    column-count: 3;
+    column-gap: 40px;
+    column-rule: 1px dotted var(--spanish);
+    text-align: justify;
+    margin-bottom: 30px;
+}
+figcaption{
+    font-size: 14px;
+    line-height: 1.2;
+    padding-left: 15px;
+}
+/*------------News_Girl設定------------*/
+/*----------左右版面區塊設定----------*/
+.leftcolumn{
+    float: left;
+    width: 75%;
+}
+.rightcolumn{
+    float: right;
+    width: 25%;
+}
+
+/*----------圖文塊設定----------*/
+.card{
+    background-color: var(--white);
+    padding: 20px;
+    margin: 20px;
+}
+.card h2{
+    text-transform: none;
+    line-height: 1.1;
+    margin-bottom: 10px;
+}
+.card h5{
+    line-height: 1.5;
+}
+.card p{
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.leftcolumn .card p{
+    text-align: justify;
+}
+.leftcolumn .card p img{
+    float: left;
+    width: 50%;
+    height: auto;
+    filter: drop-shadow(5px 5px 5px var(--grey));
+}
+
+.cardimg{
+    width: 100%;
+    overflow: hidden;
+    margin: 10px auto 5px;
+}
+.card img{
+    width: 100%;
+    height: auto;
+}
+.card span{
+    display: block;
+    margin-bottom: 20px;
+    font-size: 15px;
+    text-align: center;
+}
+/*------------News_Child設定------------*/
+/*----------內容區塊設定----------*/
+.container{
+    cursor: pointer;
+    position: relative;
+}
+.column-count{
+    column-count: 3;
+}
+.content_box{
+    margin: 10px;
+    width: calc(100% - 20px);
+    border-radius: 15px;
+    box-shadow: 0 0 5px var(--spanish);
+}
+.overlay{
+    background-color: rgba(241, 138, 184, 0.1);
+    border-radius: 0 0 15px 15px;
+    width: calc(100% - 20px);
+    height: 0;
+    transition: 0.5s ease;
+    position: absolute;
+    bottom: 13px;
+    left: 10px;
+}
+.container:hover .overlay{
+    height: 50%;
+    background-color: rgba(241, 138, 184, 0.7);
+}
+.text{
+    color: rgba(255, 255, 255, 0);
+    font-size: var(--h4);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);    
+}
+.container:hover .overlay .text{
+    color: rgba(255, 255, 255, 1);
+}
+/*------------Contact設定------------*/
+/*----------3圖區塊設定----------*/
+.features_box{
+    height: 500px;
+    position: relative;
+}
+.pic_circle{
+    border-radius: 50%;
+    border: solid 2px var(--white);
+    box-shadow: 0 0 15px 1px var(--pink);
+    background-position: center;
+    background-size:cover;
+}
+/*-----第一張圖(左)設定-----*/
+.pic_circle:first-child{
+    background-image: url(../images/store1.jpg);
+    width: 376px;
+    height: 376px;
+    float: left;
+    transform: translateY(17%);
+}
+/*-----第三張圖(中)設定-----*/
+.pic_circle:last-child{
+    background-image: url(../images/store2.jpg);
+    width: 488px;
+    height: 488px;
+    position: absolute;
+    bottom: 0;
+    left: 29%;
+}
+/*-----第二張圖(右)設定-----*/
+.pic_circle:nth-child(2){
+    background-image: url(../images/store3.jpg);
+    width: 376px;
+    height: 376px;
+    float: right;
+    transform: translateY(17%);
+}
+
+/*---------步驟區塊設定----------*/
+.steps{
+    counter-reset: mystep step_word;
+}
+
+.step{
+    width: 33.333%;
+    float: left;
+    text-align: center;
+    padding: 5px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 0;
+}
+.step::before{
+    display: block;
+    width: 45px;
+    height: 45px;
+    content: counter(mystep);
+    counter-increment: mystep;
+    font-size: 35px;
+    line-height: 45px;
+    font-weight: bolder;
+    color: var(--pink);
+    border: 4px solid var(--pink);
+    background-color: var(--white);
+    border-radius: 50%;
+    padding: 5px;
+    margin: 35px auto;
+}
+.step h4::after{
+    content: counter(step_word);
+    counter-increment: step_word;
+}
+
+/*---------步驟內容文字設定----------*/
+.step h4{
+    font-size: var(--h2);
+    color: var(--grey);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.step p{
+    font-size: var(--h6);
+    color: var(--grey);
+    line-height: 1.3;
+}
+
+/*---已完成步驟的標題文字為粉紅色---*/
+.active h4{
+    clear: var(--pink);
+    font-weight: bolder;
+}
+
+/*---尚未完成步驟的文字為灰色---*/
+.active~.step h4, .activ~.step p{
+    color: var(--spanish);
+}
+
+/*-----設定放在第一個數字後面的連接線為粉紅色-----*/
+.step::after{
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: var(--pink);
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    z-index: -1;/*--設定連接線的Z軸順序--*/
+}
+
+/*-----設定目前步驟的數字-----*/
+.active::before{
+    background-color: var(--pink);
+    color: var(--white);
+    border-color: var(--white);
+    box-shadow: 0 0 10px var(--spanish);
+}
+
+/*-----設定尚未完成步驟的數字-----*/
+.active~ .step::before{
+    background-color: var(--spanish);
+    color: var(--white);
+    border-color: var(--silver);
+}
+
+/*-----設定尚未完成步驟的連接線為灰色-----*/
+.active~.step::after{
+    background-color: var(--spanish);
+    transform: translateX(-92%);
+}

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,  user-scalable=1, minimum-scale=1.0, maximum-scale=2.0">
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag -->
+
+  <meta name="keywords" content="fasion village,fashion-village,fasion-village.com,shomon soft,shomonsoft,shomonsoft.com">
+  <meta name="Description" content="Fashion Village is capable of exporting within very short period of time after the completion of production. We provide you with expert service on sourcing supplies and manufacture fashion items for your brand.We are specialized in manufacturing all kinds of Men’s wear, Women’s wear & Children’s wear.We have strong supervision on our authorized/partner factories by regular visit and expert Q.C team. We used to visit the factories in regular basis for the prompt result and if anything goes wrong, we can fix this up ASAP.We have no compromise with goods quality and our main goal is to satisfy our customer professionally with their expected quality and on time delivery of the order.">
+  <title>Welcome to Fashion Village - Hot News - Child</title>
+
+  <!-- 網站字型 -->
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+
+  <!--網站小圖示-->
+  <link rel="shortcut icon" href="images/ficon.ico">
+  <!--for old browser-->
+  <link rel="icon" href="images/ficon.png">
+
+  <!-- 加入主畫面圖示 -->
+  <link rel="apple-touch-icon" href="images/ficon.png">
+
+  <!-- 材料圖示指南  https://developers.google.com/fonts/docs/material_icons?hl=zh-tw#icon_font_for_the_web -->
+  <!--Google圖標-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <!--歸零CSS-->
+  <link href="css/reset.css" rel="stylesheet" type="text/css">
+  <!--變數設定CSS-->
+  <link href="css/basic.css" rel="stylesheet" type="text/css">
+  <!--版面設定CSS-->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- 媒體查詢CSS -->
+  <link rel="stylesheet" href="css/style-m.css" media="(min-width:980px) and (max-width:1239px)">
+  <link rel="stylesheet" href="css/style-s.css" media="(max-width:979px)">
+
+  <!-- 載入共用JQuery元件 for gotop&橫幅 -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <!-- for gotop使用 -->
+  <script src="js/gotop.js"></script>
+
+</head>
+
+<body>
+  <!-- #header+.hero-image+#main-content+#footer+#gotop -->
+  <!--頁首區塊-->
+  <div id="header">
+    <!-- #logo+#nav -->
+    <div id="logo">
+      <h1><span>Fashion Village</span><a href="index.html"></a></h1>
+    </div>
+    <div id="nav">
+      <!-- nav#top-nav+nav#main-nav -->
+      <!--上層固定選單-->
+      <nav id="top-nav">
+        <ul>
+          <li><a href="#0"><span class="material-icons">app_shortcut</span><span class="topnav-text">go to app</span></a></li><!--使用Google圖標-->
+          <li><a href="#0"><span class="material-icons">storefront</span><span class="topnav-text">Online Shop</span></a></li><!--使用Google圖標-->
+        </ul>
+      </nav>
+      <nav id="main-nav">
+        <!-- 漢堡選單 -->
+        <span class="tip">Click to Open Nevigation.</span>
+        <input type="checkbox" class="toggler">
+        <div class="hamburger">
+          <div></div>
+        </div>
+        <div class="menu"><!-- 設定選單整體展開後範圍 -->
+          <!-- ul>(li>a[href=".html"])*5 -->
+          <!--主選單-->
+          <div>
+            <div>
+              <ul><!--原主選單內容-->
+                <li><a href="about.html">About</a></li>
+                <li><a href="stores.html">Stores</a></li>
+                <li><a href="products.html">Prducts</a></li>
+                <li><a href="news.html" class="highlight_txt">News<span class="material-icons">arrow_drop_down</span></a><!--使用Google圖標-->
+                  <!-- ul>(li>a[href="news_.html"])*3 -->
+                  <ul>
+                    <li><a href="news_lady.html">Lady</a></li>
+                    <li><a href="news_girl.html">Girl</a></li>
+                    <li><a href="news_child.html">Child</a></li>
+                  </ul>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+
+                <!-- SNS選單 -->
+                <p id="nav-sns">
+                  <a href="https://www.facebook.com/fashionvillage/" target="_blank"><img src="images/icon-fb.svg" alt="Fashion Village" /></a>
+                  <a href="https://www.instagram.com/fashionvillage/" target="_blank"><img src="images/icon-ig.svg" alt="Fashion Village" /></a>
+                  <a href="https://www.linkedin.com/fashionvillage/" target="_blank"><img src="images/icon-linkedin.svg" alt="Fashion Village" /></a>
+                  <a href="https://web.skype.com/" target="_blank"><img src="images/icon-skype.svg" alt="" /></a>
+                  <a href="https://www.twitter.com/fashionvillage/" target="_blank"><img src="images/icon-twitter.svg" alt="Fashion Village" /></a>
+                </p>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <!--橫幅區塊-->
+  <div class="hero-image" style="background-image: linear-gradient(rgba(50, 50, 50, 0.5), rgba(0, 0, 0, 0.7)), url('images/banner8.jpg');">
+    <!-- .hero-text>h1.font-size_50[class="line-height_15"][class="font-weight_bolder"][class="text_uppercase"]+h3.margin-top_50 -->
+    <div class="hero-text">
+      <h1 class="font-size_50 line-height_15 font-weight_bolder text_uppercase">Child Hot News</h1>
+      <h3 class="margin-top_50">
+        <!-- a.text_uppercase[href="news.html"][class="font-weight_bolder"]{News}+i.material-icons{keyboard_arrow_right}+span{Child} -->
+        <a href="news.html" class="text_uppercase font-weight_bolder">News</a>
+        <i class="material-icons">keyboard_arrow_right<!--使用Google圖標--></i>
+        <span>Child</span>
+      </h3>
+    </div>
+  </div>
+
+  <!--內容區塊-->
+  <div id="main-content" class="column-gap_0 column-count">
+    <!-- (.container>img[src="images/child-$.jpg"][class="content_box"]+.overlay>.text{自行填入文字})*20 -->
+    <div class="container">
+      <img src="images/child-1.jpg" alt="" class="content_box">
+      <div class="overlay">
+        <div class="text">Teen collection for the latest looks for boys and girls.</div>
+      </div>
+    </div>
+    <div class="container">
+      <img src="images/child-2.jpg" alt="" class="content_box">
+      <div class="overlay">
+        <div class="text">Hand-picked from the labels you love.</div>
+      </div>
+    </div>
+    <div class="container">
+      <img src="images/child-3.jpg" alt="" class="content_box">
+      <div class="overlay">
+        <div class="text">Dress teen boys in the latest looks straight from the designers they love.</div>
+      </div>
+    </div>
+    <div class="container">
+      <img src="images/child-4.jpg" alt="" class="content_box">
+      <div class="overlay">
+        <div class="text">Teen collection for the latest looks for boys and girls.</div>
+      </div>
+    </div>
+    <div class="container">
+      <img src="images/child-5.jpg" alt="" class="content_box">
+      <div class="overlay">
+        <div class="text">Put their best foot forward in the latest shoes for boy, girl and baby. </div>
+      </div>
+    </div>
+    <div class="container">
+      <img src="images/child-6.jpg" alt="" class="content_box">
+      <div class="overlay">
+        <div class="text">There’s a pair for every outfit and occasion.</div>
+      </div>
+    </div>
+    <div class="container">
+      <img src="images/child-7.jpg" alt="" class="content_box">
+      <div class="overlay">
+        <div class="text">Welcome to our Lifestyle Hub for parenting advice.</div>
+      </div>
+    </div>
+    <div class="container">
+      <img src="images/child-8.jpg" alt="" class="content_box">
+      <div class="overlay">
+        <div class="text">Build baby’s new-season wardrobe with all the essentials.</div>
+      </div>
+    </div>
+    <div class="container">
+      <img src="images/child-9.jpg" alt="" class="content_box">
+      <div class="overlay">
+        <div class="text">Go Organic with Madeleine Shaw | Recipe: Mexican Sweet Potato Boats.</div>
+      </div>
+    </div>
+    <div class="container">
+      <img src="images/child-10.jpg" alt="" class="content_box">
+      <div class="overlay">
+        <div class="text">Life in lockdown has changed the daily routine for most of us.</div>
+      </div>
+    </div>
+    <div class="container">
+      <img src="images/child-11.jpg" alt="" class="content_box">
+      <div class="overlay">
+        <div class="text">Madeleine shares with us one of her favourite recipes for children.</div>
+      </div>
+    </div>
+    <div class="container">
+      <img src="images/child-12.jpg" alt="" class="content_box">
+      <div class="overlay">
+        <div class="text">Back to School Lunches | @gemswholesomekitchen.</div>
+      </div>
+    </div>
+    <div class="container">
+      <img src="images/child-13.jpg" alt="" class="content_box">
+      <div class="overlay">
+        <div class="text">Iconic Designer | Alexander McQueen.</div>
+      </div>
+    </div>
+    <div class="container">
+      <img src="images/child-14.jpg" alt="" class="content_box">
+      <div class="overlay">
+        <div class="text">The Childrensalon Book Corner | What are germs?</div>
+      </div>
+    </div>
+    <div class="container">
+      <img src="images/child-15.jpg" alt="" class="content_box">
+      <div class="overlay">
+        <div class="text">How have you found balancing work during lockdown with parenting a young child?</div>
+      </div>
+    </div>
+    <div class="container">
+      <img src="images/child-16.jpg" alt="" class="content_box">
+      <div class="overlay">
+        <div class="text">Childrensalon Family Diaries | Bonnie Reay-Smith.</div>
+      </div>
+    </div>
+    <div class="container">
+      <img src="images/child-17.jpg" alt="" class="content_box">
+      <div class="overlay">
+        <div class="text">Childrensalon Family Diaries | Zhong Chen.</div>
+      </div>
+    </div>
+    <div class="container">
+      <img src="images/child-18.jpg" alt="" class="content_box">
+      <div class="overlay">
+        <div class="text">Childrensalon Family Diaries | Zama Lagundoye</div>
+      </div>
+    </div>
+    <div class="container">
+      <img src="images/child-19.jpg" alt="" class="content_box">
+      <div class="overlay">
+        <div class="text">Childrensalon Family Diaries.</div>
+      </div>
+    </div>
+    <div class="container">
+      <img src="images/child-20.jpg" alt="" class="content_box">
+      <div class="overlay">
+        <div class="text">Little Storytellers | September 2020.</div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--頁尾區塊-->
+  <div id="footer">
+    <!-- #small-logo+#copyright+#sns-->
+    <div id="small-logo"> <img src="images/logo-small.png" alt="FasionVillage"> </div>
+    <div id="copyright"><small>Copyright  ©2020 Fashion Village</small><a href="tel:+8801886-666581">tel:+8860912345678</a> </div>
+    <div id="sns">
+      <!-- (a[target="_blank"]>img[src="images/icon-.svg"][alt=""])*5 -->
+      <a href="https://www.facebook.com/fashionvillage/" target="_blank">
+        <img src="images/icon-fb.svg" alt="" />
+      </a>
+      <a href="https://www.instagram.com/fashionvillage/" target="_blank">
+        <img src="images/icon-ig.svg" alt="" />
+      </a>
+      <a href="https://www.linkedin.com/fashionvillage" target="_blank">
+        <img src="images/icon-linkedin.svg" alt="" />
+      </a>
+      <a href="https://web.skype.com/" target="_blank">
+        <img src="images/icon-skype.svg" alt="" />
+      </a>
+      <a href="https://www.twitter.com/fashionvillage" target="_blank">
+        <img src="images/icon-twitter.svg" alt="" />
+      </a>
+    </div>
+  </div>
+
+  <!--Go Top區塊-->
+  <div id="gotop">
+    <!-- a[href="#"]>span.material-icon+span.gotip{Go Back To Top} -->
+    <!-- <a href="#"> -->
+    <span class="material-icons">arrow_circle_up</span><!--使用Google圖標-->
+    <span class="gotip">Go Back To Top</span>
+    <!-- </a> -->
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+
+#pbOverlay, #pbImage, #pbBottom, #pbCloseBtn {
+	position: fixed;
+    z-index: 9999;
+}
+#pbOverlay {
+	left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--black);
+    cursor: pointer;
+}
+#pbCloseBtn {
+	top: 20px;
+    right: 30px;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: url(../css/closebutton.png) no-repeat top left;	
+}
+.pbLoading {
+	background: var(--black) url(../images/loading.gif) no-repeat center !important;	
+}
+#pbImage {
+	box-shadow: 0 0 20px var(--white);
+	cursor: move;
+}
+#pbBottom {
+	font-size: 15px;
+    text-align: center;
+    color: var(--white);
+    line-height: 30px;
+    left: 50%;
+    bottom: 10px;
+    width: 400px;
+	margin-left: -200px;
+}
+#pbCaption {
+	font-weight: bold;
+    padding: 10px;
+    display: inline-block;
+	background-color: rgba(0,0,0,.7);
+    border-radius: 15px;
+}
+#pbNav {
+	display: block;
+    width: 282px;
+    height: 70px;
+	margin: auto;
+    margin-top: 5px;
+}
+#pbPrevBtn, #pbNextBtn, #pbZoomBtn, #pbLeftBtn, #pbRightBtn {
+	display: inline-block;
+    height: 70px;
+	background: url(../images/navbtns.png) no-repeat;
+}
+#pbPrevBtn {
+	background-position: -223px 0;
+    width: 40px;
+	float: left;
+}
+#pbPrevBtn.pbgreyed {
+    background-position: -521px 0;	
+}
+#pbNextBtn {
+	background-position: -337px 0;
+    width: 40px;
+	float: left;	
+}
+#pbNextBtn.pbgreyed {
+	background-position: -560px 0;		
+}
+#pbZoomBtn {
+	background-position: -263px 0;
+    width: 74px;
+	float: left;	
+}
+#pbZoomBtn.pbgreyed {	
+	background-position: -74px 0;	
+}
+#pbZoomBtn.pbzoomed {
+	background-position: 0 0;	
+}
+#pbLeftBtn {
+	background-position: -159px 0;
+    width: 64px;
+	float: left;	
+}
+#pbRightBtn {
+	background-position: -377px 0;
+    width: 64px;
+	float: right;	
+}

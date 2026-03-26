@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,  user-scalable=1, minimum-scale=1.0, maximum-scale=2.0">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag -->
+
+    <meta name="keywords" content="fashion village,fashion-village,fashion-village.com,shomon soft,shomonsoft,shomonsoft.com">
+    <meta name="Description" content="Fashion Village is capable of exporting within very short period of time after the completion of production. We provide you with expert service on sourcing supplies and manufacture fashion items for your brand.We are specialized in manufacturing all kinds of Men’s wear, Women’s wear & Children’s wear.We have strong supervision on our authorized/partner factories by regular visit and expert Q.C team. We used to visit the factories in regular basis for the prompt result and if anything goes wrong, we can fix this up ASAP.We have no compromise with goods quality and our main goal is to satisfy our customer professionally with their expected quality and on time delivery of the order.">
+    <meta name="author" content="Sunny, lovelychining@gmail">
+    <title>Welcome to Fashion Village</title>
+
+    <!-- 網站字型 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+
+    <!--網站小圖示-->
+    <link rel="shortcut icon" href="images/ficon.ico">
+    <!--for old browser-->
+    <link rel="icon" href="images/ficon.png">
+
+    <!-- 加入主畫面圖示 -->
+    <link rel="apple-touch-icon" href="images/ficon.png">
+
+    <!--Google圖標-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- 橫幅輪播控制小圖示 -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
+    <!--歸零CSS-->
+    <link rel="stylesheet" href="css/reset.css">
+    <!--變數設定CSS-->
+    <link href="css/basic.css" rel="stylesheet" type="text/css">
+
+    <!--版面設定CSS-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- 媒體查詢CSS -->
+    <link rel="stylesheet" href="css/style-m.css" media="(min-width:980px) and (max-width:1239px)">
+    <link rel="stylesheet" href="css/style-s.css" media="(max-width:979px)">
+
+    <!-- 橫幅輪播CSS -->
+    <link rel="stylesheet" href="css/slide.css">
+
+    <!-- 載入共用JQuery元件 for gotop&橫幅 -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- 橫幅輪播JS宣告 -->
+    <script src="js/slide.min.js"></script>
+
+    <!-- for gotop使用 -->
+    <script src="js/gotop.js"></script>
+
+</head>
+
+<body>
+    <!-- #header+#banner+#main-content+#picshow+#movie+#footer+#gotop -->
+    <!--頁首區塊-->
+    <div id="header">
+        <!-- #logo+#nav -->
+        <div id="logo">
+            <h1><span>Fashion Village</span><a href="index.html"></a></h1>
+        </div>
+        <div id="nav">
+            <!-- nav#top-nav+nav#main-nav -->
+            <!--上層固定選單-->
+            <nav id="top-nav">
+                <ul>
+                    <li><a href="#0"><span class="material-icons">app_shortcut</span><span class="topnav-text">go to app</span></a></li><!--使用Google圖標-->
+                    <li><a href="#0"><span class="material-icons">storefront</span><span class="topnav-text">Online Shop</span></a></li><!--使用Google圖標-->
+                </ul>
+            </nav>
+            <nav id="main-nav">
+                <!-- 漢堡選單 -->
+                <span class="tip">Click to Open Nevigation.</span>
+                <input type="checkbox" class="toggler">
+                <div class="hamburger">
+                    <div></div>
+                </div>
+                <div class="menu"><!-- 設定選單整體展開後範圍 -->
+                    <!-- ul>(li>a[href=".html"])*5 -->
+                    <!--主選單-->
+                    <div>
+                        <div>
+                            <ul><!--原主選單內容-->
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="stores.html">Stores</a></li>
+                                <li><a href="products.html">Prducts</a></li>
+                                <li><a href="news.html">News<span class="material-icons">arrow_drop_down</span></a><!--使用Google圖標-->
+                                    <!-- ul>(li>a[href="news_.html"])*3 -->
+                                    <ul>
+                                        <li><a href="news_lady.html">Lady</a></li>
+                                        <li><a href="news_girl.html">Girl</a></li>
+                                        <li><a href="news_child.html">Child</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="contact.html">Contact</a></li>
+
+                                <!-- SNS選單 -->
+                                <p id="nav-sns">
+                                    <a href="https://www.facebook.com/fashionvillage/" target="_blank"><img src="images/icon-fb.svg" alt="Fashion Village" /></a>
+                                    <a href="https://www.instagram.com/fashionvillage/" target="_blank"><img src="images/icon-ig.svg" alt="Fashion Village" /></a>
+                                    <a href="https://www.linkedin.com/fashionvillage/" target="_blank"><img src="images/icon-linkedin.svg" alt="Fashion Village" /></a>
+                                    <a href="https://web.skype.com/" target="_blank"><img src="images/icon-skype.svg" alt="" /></a>
+                                    <a href="https://www.twitter.com/fashionvillage/" target="_blank"><img src="images/icon-twitter.svg" alt="Fashion Village" /></a>
+                                </p>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+
+    <!--橫幅區塊-->
+    <!-- <div id="banner"><img src="images/banner1.jpg" alt="Fashion Village" /></div> -->
+    <div id="banner">
+        <div id="slide2d" class="slide-carousel slide-2d">
+            <!-- 四張輪播圖 -->
+            <ul class="item-list">
+                <li class="item0">
+                    <div class="item-content">
+                        <a href="javascript:void(0);">
+                            <picture>
+                                <source media="(min-width:768px) and (max-width:959px)" srcset="images/banner1-tablet.jpg">
+                                <source media="(max-width:767px)" srcset="images/banner1-mobile.jpg">
+                                <img src="images/banner1.jpg" alt="">
+                            </picture>
+                        </a>
+                    </div>
+                </li>
+                <li class="item1">
+                    <div class="item-content">
+                        <a href="javascript:void(0);">
+                            <picture>
+                                <source media="(min-width:768px) and (max-width:959px)" srcset="images/banner2-tablet.jpg">
+                                <source media="(max-width:767px)" srcset="images/banner2-mobile.jpg">
+                                <img src="images/banner2.jpg" alt="">
+                            </picture>
+                        </a>
+                    </div>
+                </li>
+                <li class="item2">
+                    <div class="item-content">
+                        <a href="javascript:void(0);">
+                            <picture>
+                                <source media="(min-width:768px) and (max-width:959px)" srcset="images/banner3-tablet.jpg">
+                                <source media="(max-width:767px)" srcset="images/banner3-mobile.jpg">
+                                <img src="images/banner3.jpg" alt="">
+                            </picture>
+                        </a>
+                    </div>
+                </li>
+                <li class="item3">
+                    <div class="item-content"> <a href="javascript:void(0);">
+                            <picture>
+                                <source media="(min-width:768px) and (max-width:959px)" srcset="images/banner4-tablet.jpg">
+                                <source media="(max-width:767px)" srcset="images/banner4-mobile.jpg">
+                                <img src="images/banner4.jpg" alt="">
+                            </picture>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+
+            <!--指示小圖示-->
+            <div class="indicator-list">
+                <a href="javascript:void(0);" data-slide-index="0" class="selected"></a>
+                <a href="javascript:void(0);" data-slide-index="1"></a>
+                <a href="javascript:void(0);" data-slide-index="2"></a>
+                <a href="javascript:void(0);" data-slide-index="3"></a>
+            </div>
+
+            <!--左右控制器-->
+            <div class="controls">
+                <a class="item-prev material-symbols-outlined" href="javascript:void(0);">arrow_back_ios</a>
+                <a class="item-next material-symbols-outlined" href="javascript:void(0);">arrow_forward_ios</a>
+            </div>
+
+            <!--說明文字, 無文字只有半透明色塊-->
+            <div class="desc">
+                <!-- <a href=""><strong id="sliderDesc1"></strong></a> -->
+            </div>
+
+        </div>
+    </div>
+
+    <!--內容區塊-->
+    <div id="main-content">
+        <!-- .slogan>h2{Who Are FashionVillage?}+p*5-->
+        <div class="slogan">
+            <h2>Who Are Fashion Village?</h2>
+            <p>‘Fashion Village’ Is One Of The Leading Garments/Apparel Sourcing Buying House &amp; Readymade Garments Exporter. </p>
+            <p>We Serve As Local And International Buyer's Representative And Strive To Deliver Satisfying Buying Experience
+                Of Fabric And Readymade Garments To Fashion Buyers &amp; Importers All Over The World.</p>
+            <p>We Believe, We Can Deliver You Better Results Than Our Competitors.</p>
+            <p>Let Me Know If You Have Any Ideas.Email:<a href="mailto:service@fashionvillage.com">service@fashionvillage.com</a></p>
+            <p>Or You Can Visit Our Office: <br>107 Tycos Dr Unit #3, North York</p>
+        </div>
+
+        <!-- (.post>.post_title{Girls Fashionable Dress}+(.post_img>a[href="products.html"]>img[src="images/postimg$.jpg"][alt="Fashion Village"][title="Click to see more"])+.post_text+.more>a[href="products.html"]{View More &gt;&gt;})*2 -->
+        <div class="post">
+            <div class="post_title">Girls Fashionable Dress</div>
+            <div class="post_img"><a href="products.html"><img src="images/postimg1.jpg" alt="Fashion Village" title="Click to see more" /></a></div>
+            <div class="post_text"> Explore our outerwear collection for year-round layering with jackets, windbreakers, coats, and cold-weather accessories. We also offer special occasion and communion dresses. </div>
+            <div class="more"><a href="products.html">View More <i class="material-icons">double_arrow</i></a></div>
+            <!--使用Google圖標-->
+        </div>
+
+        <div class="post">
+            <div class="post_title">Girls Fashionable Dress</div>
+            <div class="post_img"><a href="products.html"><img src="images/postimg2.jpg" alt="Fashion Village" title="Click to see more" /></a></div>
+            <div class="post_text">We're always ready with casual wear for school or playtime for your little girl with
+                items including jeans, T-shirts, and sets from True Religion, Levi's, and VIP Jeans.</div>
+            <div class="more"><a href="products.html">View More <i class="material-icons">double_arrow</i></a></div>
+            <!--使用Google圖標-->
+        </div>
+    </div>
+
+    <!--展示圖區塊-->
+    <div id="picshow">
+        <!-- (a[href="products.html"]>img[src="images/picshow$.jpg"][alt="Fashion Village"][title="Click to see more"])*4 -->
+        <a href="products.html"><img src="images/picshow1.jpg" alt="Fashion Village" title="Click to see more" /></a>
+        <a href="products.html"><img src="images/picshow2.jpg" alt="Fashion Village" title="Click to see more" /></a>
+        <a href="products.html"><img src="images/picshow3.jpg" alt="Fashion Village" title="Click to see more" /></a>
+        <a href="products.html"><img src="images/picshow4.jpg" alt="Fashion Village" title="Click to see more" /></a>
+    </div>
+
+    <!--影片區塊-->
+    <div id="movie">
+        <iframe src="https://youtu.be/eKoy8SSB63Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <!--頁尾區塊-->
+    <div id="footer">
+        <!-- #small-logo+#copyright+#sns-->
+        <div id="small-logo"> <img src="images/logo-small.png" alt="fashionVillage"> </div>
+
+        <div id="copyright">
+            <small>Copyright  &copy;2020 Fashion Village</small>
+            <a href="tel:+8801886-666581">tel:+8860912345678</a>
+        </div>
+
+        <!-- 使用svg向量圖 -->
+        <div id="sns">
+            <!-- (a[target="_blank"]>img[src="images/icon-.svg"][alt="Fashion Village"])*5 -->
+            <a href="https://www.facebook.com/fashionvillage/" target="_blank"><img src="images/icon-fb.svg" alt="Fashion Village" /></a>
+            <a href="https://www.instagram.com/fashionvillage/" target="_blank"><img src="images/icon-ig.svg" alt="Fashion Village" /></a>
+            <a href="https://www.linkedin.com/fashionvillage/" target="_blank"><img src="images/icon-linkedin.svg" alt="Fashion Village" /></a>
+            <a href="https://web.skype.com/" target="_blank"><img src="images/icon-skype.svg" alt="" /></a>
+            <a href="https://www.twitter.com/fashionvillage/" target="_blank"><img src="images/icon-twitter.svg" alt="Fashion Village" /></a>
+        </div>
+
+    </div>
+
+    <!--Go Top區塊-->
+    <div id="gotop">
+        <!-- a[href="#"]>span.material-icon+span.gotip{Go Back To Top} -->
+        <!-- <a href="#"> -->
+        <span class="material-icons">arrow_circle_up</span><!--使用Google圖標-->
+        <span class="gotip">Go Back To Top</span>
+        <!-- </a> -->
+    </div>
+
+</body>
+
+</html>

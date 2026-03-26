@@ -1,0 +1,737 @@
+/*---------------共用結構設定---------------*/
+/*------------頁首頁尾設定------------*/
+#header,
+#footer {
+  width: calc(100% - 20px);
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+#header {
+  height: 120px;
+}
+
+#logo a {
+  width: 250px;
+  height: 120px;
+}
+
+/*--------選單設定--------*/
+/*---外層結構---*/
+#nav {
+  width: 50%;
+  margin-top: 30px;
+}
+
+/*---上層固定---*/
+#top-nav {
+  float: none;
+  width: 70%;
+  margin: 5px 20px 5px 0;
+  display: flex;
+  justify-content: flex-end;
+  font-size: var(--normal, 16px);
+}
+
+@media (max-width:520px) {
+  #nav {
+    width: 120px;
+  }
+
+  #top-nav a {
+    display: block;
+    width: 70px;
+    margin-left: 10px;
+    float: left;
+  }
+
+  #top-nav .topnav-text {
+    display: none;
+  }
+}
+
+@media (max-width:400px) {
+  #nav {
+    width: 80px;
+  }
+
+  #top-nav {
+    display: none;
+  }
+}
+
+/*---主選單---*/
+#main-nav {
+  float: none;
+  position: fixed;
+  top: 40px;
+  right: 25px;
+  z-index: 9999;
+  font-size: var(--h6, 18px);
+}
+
+#main-nav:hover .tip,
+#main-nav:active .tip {
+  visibility: visible;
+}
+
+#main-nav a {
+  float: none;
+  width: 100%;
+  margin-left: 0;
+  overflow: hidden;
+  background-color: var(--empty, #ffffff00);
+  color: var(--pink, #f18ab8ff);
+}
+
+/* ---滑鼠滑入---*/
+#main-nav a:hover,
+#main-nav a:active {
+  color: var(--grey, #545454ff);
+  border-bottom: none;
+  text-transform: uppercase;
+}
+
+#main-nav li {
+  float: none;
+}
+
+.highlight_txt {
+  border-bottom: none;
+  background-color: rgba(235, 87, 87, 0.3) !important;
+  color: var(--grey, #545454ff) !important;
+}
+
+/*---針對第二層選單---*/
+#main-nav li li a {
+  display: block;
+  margin-right: 40px;
+  float: left;
+  font-size: var(--normal, 16px);
+}
+
+@media (max-width:500px) {
+  #main-nav li li a {
+    margin-right: 20px;
+  }
+}
+
+@media (max-width:425px) {
+  #main-nav li li a {
+    margin-right: 10px;
+  }
+}
+
+@media (max-width:375px) {
+  #main-nav li li a {
+    margin-right: 0;
+  }
+}
+
+@media (max-width:320px) {
+  #main-nav li li a {
+    margin-right: -10px;
+  }
+}
+
+#main-nav ul ul {
+  transform: translate(450%, -67%);
+  visibility: hidden;
+}
+
+@media (max-width:768px) {
+  #main-nav ul ul {
+    transform: translate(400%, -67%);
+  }
+}
+
+@media (max-width:640px) {
+  #main-nav ul ul {
+    transform: translate(300%, -67%);
+  }
+}
+
+#main-nav ul ul a {
+  width: 100px;
+}
+
+/* ---滑鼠滑入展開次選單---*/
+#main-nav li:hover>ul {
+  visibility: visible;
+}
+
+.menu>div>div>ul>li>a {
+  transition: all .4s ease;
+}
+
+
+/*----漢堡選單設定----*/
+.toggler {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+}
+
+.hamburger {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 25px;
+  height: 25px;
+  padding: 12px;
+  background-color: var(--pink, #f18ab8ff);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*---hamburger line---*/
+.hamburger>div {
+  /*第一條橫線*/
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background-color: var(--white, #ffffffff);
+  transition: all .4s ease
+}
+
+.hamburger>div::before,
+/*第二條橫線*/
+.hamburger>div::after {
+  /*第三條橫線*/
+  content: '';
+  position: absolute;
+  z-index: 2;
+  top: -10px;
+  width: 100%;
+  height: 2px;
+  background: inherit;
+}
+
+/* ---move line down--- */
+.hamburger>div::after {
+  top: 10px;
+}
+
+/* ---toggler animate--- */
+.toggler:checked+.hamburger>div {
+  transform: rotate(135deg);
+}
+
+/* ---turn line into X--- */
+.toggler:checked+.hamburger>div::before,
+.toggler:checked+.hamburger>div::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+/* ---rotate on hover when checked--- */
+.toggler:checked:hover+.hamburger>div {
+  transform: rotate(225deg);
+}
+
+/* ---show menu--- */
+.toggler:checked~.menu {
+  /*設定選單開啟後內容可視化 */
+  visibility: visible;
+}
+
+.toggler:checked~.menu>div {
+  /*設定開啟時選單背景大小及動畫 */
+  transform: scale(1);
+  transition-duration: 0.75s;
+}
+
+.toggler:checked~.menu>div>div {
+  /*設定開啟時選單內容框架透明度及動畫 */
+  opacity: 1;
+  transition: opacity .4s ease;
+}
+
+.menu {
+  /*設定選單內容格式 */
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  visibility: hidden;
+  ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu>div {
+  /*設定選單關閉時背景格式及動畫 */
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  width: 300vw;
+  height: 300vh;
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  transition: all .4s ease;
+}
+
+.menu>div>div {
+  /*設定選單內容框架關閉時格式及動畫 */
+  text-align: center;
+  width: 100vw;
+  max-height: 100vh;
+  opacity: 0;
+  transition: opacity .4s ease;
+}
+
+/*----SNS選單設定----*/
+#nav-sns {
+  display: block;
+  margin-top: 30px;
+}
+
+#nav-sns a {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  margin: 5px;
+}
+
+#nav-sns a:hover {
+  background-color: var(--empty, #ffffff00);
+}
+
+/*-----------頁尾設定-----------*/
+#footer {
+  width: 100%;
+  margin: 30px auto;
+  border-bottom: solid 15px var(--pink, #f18ab8ff);
+}
+
+#small-logo,
+#sns {
+  display: none;
+}
+
+#copyright small,
+#copyright a {
+  padding-top: 10px;
+  display: block;
+}
+
+#copyright {
+  width: 100%;
+  font-size: var(--normal, 16px);
+  text-align: center;
+  padding-top: 0;
+}
+
+
+/*---------------各頁版面設定---------------*/
+/*------------首頁版面設定------------*/
+/*------主要內容區塊設定------*/
+#main-content {
+  width: calc(100% - 20px);
+  padding: 10px;
+}
+
+.slogan,
+.post {
+  width: 80%;
+  margin: 30px auto;
+  float: none;
+}
+
+.slogan,
+.post,
+.post_text {
+  height: auto;
+}
+
+.post {
+  padding-bottom: 30px;
+  border-bottom: solid 1px var(--pink);
+}
+
+.slogan h2,
+.post_title {
+  font-size: var(--h4);
+}
+
+.slogan p,
+.post_text {
+  font-size: var(--h6);
+}
+
+.post_img {
+  width: 100%;
+}
+
+.post_text {
+  width: calc(100% - 20px);
+  padding: 10px;
+  line-height: 1.2;
+}
+
+.post .more {
+  padding-right: 15px;
+  font-size: var(--normal);
+}
+
+.post .more a {
+  font-weight: normal;
+}
+
+/*------圖片展示設定------*/
+#picshow {
+  flex-wrap: wrap;
+}
+
+#picshow a {
+  width: 50%;
+}
+
+#picshow a img {
+  width: 100%;
+}
+
+/*------內嵌影片設定------*/
+#movie {
+  margin-bottom: 20px;
+  height: 350px;
+}
+
+#movie iframe {
+  height: 350px;
+}
+
+/*------------內頁版面設定------------*/
+/*----------共用橫幅設定----------*/
+.hero-image {
+  margin-bottom: 0;
+  position: relative;
+}
+
+.hero-text h1 {
+  font-size: 30px;
+  line-height: 1.2;
+}
+
+.hero-text p {
+  font-size: var(--small);
+  line-height: 1.2;
+}
+
+/*------------About設定------------*/
+/*----------關於文字----------*/
+#maintxt {
+  padding: 20px 10%;
+}
+
+/*----------圖片設定----------*/
+#mainpic {
+  width: 90%;
+  margin: 30px auto;
+  grid-template-rows: 50% 50%;
+  background-color: var(--piggy);
+}
+
+/*------下方表單與地圖設定------*/
+#contact_form,
+#map {
+  width: calc(100% -20px);
+  padding: 10px;
+  float: none;
+  margin-bottom: 30px;
+}
+
+#contact_form input,
+#contact_form textarea {
+  border-radius: 8px;
+}
+
+#contact_form textarea {
+  height: 250px;
+}
+
+#map iframe {
+  box-shadow: 0 0 8px var(--spanish);
+}
+
+/*------------Store設定------------*/
+.officebox {
+  width: 45%;
+  height: 300px;
+}
+
+.officebox img {
+  width: auto;
+  height: 300px;
+}
+
+@media (max-width:820px) {
+  .officebox {
+    width: 90%;
+    height: 500px;
+    float: none;
+    margin: 30px auto;
+  }
+
+  .officebox img {
+    height: 500px;
+  }
+}
+
+@media (max-width:640px) {
+  .officebox {
+    height: 450px;
+  }
+
+  .officebox img {
+    height: 450px;
+  }
+
+  .subtext {
+    text-align: left;
+    line-height: 1.3;
+  }
+}
+
+@media (max-width:500px) {
+  .officebox {
+    height: 400px;
+  }
+
+  .officebox img {
+    height: 400px;
+  }
+}
+
+/*------------Products設定------------*/
+.demobox {
+  width: calc(50% - 20px);
+  height: auto;
+  padding: 10px;
+  margin: 10px;
+}
+
+@media (max-width:600px) {
+  .demobox {
+    width: 95%;
+    margin: 20px auto;
+    float: none;
+  }
+
+  .demobox h6 {
+    margin-bottom: 25px;
+  }
+}
+
+/*------------News設定------------*/
+.newspost {
+  position: relative;
+  margin: 0 auto;
+}
+
+.news_pic {
+  width: 100%;
+  height: auto;
+  float: none;
+}
+
+.news_pic img {
+  width: 100%;
+  height: auto;
+}
+
+.news_txt {
+  width: 100%;
+  height: 50%;
+  padding: 10px 40px;
+  float: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, .8);
+}
+
+.news_txt .category,
+.news_txt p {
+  font-size: 110%;
+}
+
+@media (max-width:840px) {
+  .news_txt {
+    height: 35%;
+    padding: 10px 20px;
+  }
+
+  .news_txt .category {
+    border-radius: 30px;
+  }
+
+  .news_txt h4 {
+    padding: 0 20px;
+  }
+
+  .news_txt p {
+    display: none;
+  }
+}
+
+@media (max-width:768px) {
+  .news_txt .category {
+    line-height: 1;
+  }
+
+  .news_txt {
+    height: auto;
+    margin: 10px 0;
+  }
+
+  .news_txt h4,
+  .news_txt p,
+  .news_txt .more,
+  .news_txt a,
+  .news_txt .date {
+    display: none;
+  }
+
+  .news_txt .category::after {
+    content: "Click Picture to See More...";
+    color: var(--pink);
+    display: inline-block;
+    width: 70%;
+    text-align: right;
+    line-height: 1;
+    font-size: 80%;
+    font-weight: 800;
+  }
+}
+
+/*------------News_Lady設定------------*/
+.column img,
+figure img {
+  opacity: 1;
+  filter: grayscale(0);
+}
+
+.column-text {
+  column-count: 1;
+}
+
+@media (max-width:640px) {
+  #main-content .row .column {
+    width: 50%;
+  }
+}
+
+
+/*------------News_Girl設定------------*/
+/*-------版面區塊設定-------*/
+.leftcolumn,
+.rightcolumn {
+  float: none;
+  width: 100%;
+}
+
+/*-------圖文區塊設定-------*/
+.card {
+  padding: 15px;
+  margin: 15px;
+}
+
+
+
+/*------------News_Child設定------------*/
+/*-------內容區塊設定-------*/
+.column-count {
+  column-count: 2;
+}
+
+@media (max-width:640px) {
+  .column-count {
+    column-count: 1;
+  }
+}
+
+/*------------Contact設定------------*/
+.features_box {
+  height: 320px;
+  padding: 10px;
+  display: flex;
+}
+
+.features_box>.pic_circle {
+  border-radius: 0;
+  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+  width: 33%;
+  height: 100%;
+  position: static;
+  transform: translate(0%, 0%);
+  box-shadow: none;
+  float: none;
+  left: 0;
+  bottom: 0;
+}
+
+/*-------計數器設定-------*/
+.steps {
+  width: 100%;
+}
+
+.step::before {
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  margin: 10px auto 5px;
+
+}
+
+.step::after,
+.active~.step::after {
+  display: none;
+}
+
+/*---------步驟內容文字設定----------*/
+.step h4 {
+  font-size: var(--h5);
+  margin-bottom: 10px;
+}
+.step p {
+  font-size: var(--normal);
+  line-height: 1.1;
+}
+
+@media (max-width:768px) {
+  .features_box {
+    height: 900px;
+    display: block;
+    margin-top: -20px;
+  }
+  .features_box>.pic_circle {
+    border-radius: 20px;
+    clip-path: inset(0 0 0 0);
+    width: 100%;
+    height: 33%;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+  }
+}
+@media (max-width:425px) {
+  .step{
+    width: 100%;
+    float: none;
+    margin-bottom: 10px;
+  }
+}
